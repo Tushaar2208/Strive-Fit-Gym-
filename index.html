@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strive Fit Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="navbar-menu">
+        <li class="logo-container">
+            <h1>
+                STRIV<span class="custom-e">E</span>
+            </h1>
+            <p>FIT GYM</p>
+        </li>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#services-section">Services</a></li>
+        <li><a href="#why-choose-us">About Us</a></li>
+        <li><a href="#content-section">Pricing</a></li>
+        <li><a href="#reviews">Review</a></li>
+        <li class="nav-item">
+            <span class="line"></span>
+            <a href="tools.html" class="button tools">Tools</a>
+            <span class="line"></span>
+        </li>
+        <li><a href="#membership-form" class="button join-button">Join Now</a></li>
+    </ul>
+</nav>
+
+    <!-- Header with Video Background -->
+    <header id = "header" class="header">
+        <video class="video-bg" src="gym-background.mp4" autoplay loop muted></video>
+        <div class="header-content">
+            <h1>WANT IT ALL.<br>GET IT TOGETHER.</h1>
+            <p>Join today and reach your potential.</p>
+            <a href="#membership-form" class="btn">Join Now</a>
+        </div>
+    </header>
+    <!-- Our Services Section -->
+    <!-- Our Services Carousel Section -->
+<section class="services-section" id="services-section" data-bg="">
+    <h2>Our <span>Services</span></h2>
+    <div class="activities">
+        <div class="activity-card" data-bg="url('physical-fitness.jpg')"
+            onmouseover="changeBackground('url(\'physical-fitness.jpg\')')" onmouseout="resetBackground()">
+            <h3>Physical Fitness</h3>
+            <p>Enhance your physical health with customized fitness programs.</p>
+        </div>
+        <div class="activity-card" data-bg="url('weight-gain.jpg')"
+            onmouseover="changeBackground('url(\'weight-gain.jpg\')')" onmouseout="resetBackground()">
+            <h3>Weight Gain</h3>
+            <p>Structured weight gain programs for a healthier body mass.</p>
+        </div>
+        <div class="activity-card" data-bg="url('strength-training.jpg')"
+            onmouseover="changeBackground('url(\'strength-training.jpg\')')" onmouseout="resetBackground()">
+            <h3>Strength Training</h3>
+            <p>Boost your strength with our expert-guided training sessions.</p>
+        </div>
+        <div class="activity-card" data-bg="url('fat-loss.jpg')" onmouseover="changeBackground('url(\'fat-loss.jpg\')')"
+            onmouseout="resetBackground()">
+            <h3>Fat Loss</h3>
+            <p>Achieve your weight loss goals with personalized fat-loss routines.</p>
+        </div>
+        <div class="activity-card" data-bg="url('weightlifting.jpg')"
+            onmouseover="changeBackground('url(\'weightlifting.jpg\')')" onmouseout="resetBackground()">
+            <h3>Weightlifting</h3>
+            <p>Master the art of weightlifting with safe and effective guidance.</p>
+        </div>
+        <div class="activity-card" data-bg="url('zumba.jpg')" onmouseover="changeBackground('url(\'zumba.jpg\')')"
+            onmouseout="resetBackground()">
+            <h3>Zumba</h3>
+            <p>Enjoy high-energy dance workouts with our certified Zumba trainers.</p>
+        </div>
+        <div class="activity-card" data-bg="url('running.jpg')" onmouseover="changeBackground('url(\'running.jpg\')')"
+            onmouseout="resetBackground()">
+            <h3>Running</h3>
+            <p>Build endurance and improve your running techniques with us.</p>
+        </div>
+        <div class="activity-card" data-bg="url('bg1.jpg')" onmouseover="changeBackground('url(\'bg1.jpg\')')"
+            onmouseout="resetBackground()">
+            <h3>Boxing</h3>
+            <p>Train like a boxer and enhance your strength and agility.</p>
+        </div>
+    </div>
+</section>
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="why-choose-us-image">
+            <img src="choose_us.jpg" alt="Gym">
+        </div>
+        <div class="why-choose-us-content" id="">
+            <h2>Why Choose Us?</h2>
+            <p>Our diverse membership base creates a friendly and supportive atmosphere, where you can make friends and
+                stay
+                motivated.</p>
+            <p>Unlock your potential with our expert Personal Trainers.</p>
+            <p>Elevate your fitness with practice sessions.</p>
+            <p>We provide supportive management for your fitness success.</p>
+            <a href="#membership-form" class="cta-button">Book A Free Class</a>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="content-section" id="content-section">
+        <h2>Our Plans</h2>
+        <div class="content-box">
+            <h3>Basic Plan</h3>
+            <p>Access to all gym facilities and classes.</p>
+            <p class="price">₹2000/month</p>
+            <a href="#membership-form" class="content-link">Choose Basic Plan</a>
+        </div>
+        <div class="content-box">
+            <h3>Premium Plan</h3>
+            <p>Includes all gym facilities, classes, and exclusive premium content.</p>
+            <p class="price">₹5000/month</p>
+            <a href="#membership-form" class="content-link">Choose Premium Plan</a>
+        </div>
+        <div class="content-box">
+            <h3>Premium + Personal Trainer</h3>
+            <p>All premium benefits, plus 1:1 sessions with a certified personal trainer.</p>
+            <p class="price">₹9000/month</p>
+            <a href="#membership-form" class="content-link">Choose Premium + Trainer</a>
+        </div>
+    </section>
+    <section class="client-reviews" id="reviews">
+        <header>
+            <h2>Client Reviews</h2>
+        </header>
+
+        <div class="reviews">
+            <div class="review-card">
+                <img src="sam-sulek.jpg" alt="Sam Sulek" class="review-img">
+                <h3>Sam Sulek</h3>
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>"I've been going to Strive Fit Gym for a few months now, and I can honestly say it's the best gym I've
+                    ever joined. The trainers are super knowledgeable, and the environment is so motivating!"</p>
+            </div>
+
+            <div class="review-card">
+                <img src="saket-gokhale.jpg" alt="Saket Gokhale" class="review-img">
+                <h3>Saket Gokhale</h3>
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>"This gym has all the equipment I need, and the staff is always friendly and ready to help. I love
+                    the
+                    variety of classes they offer, and the trainers push you to do your best every time!"</p>
+            </div>
+
+            <div class="review-card">
+                <img src="cbum.jpg" alt="Cbum" class="review-img">
+                <h3>Cbum</h3>
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <p>"Strive Fit Gym has completely transformed my fitness journey. The trainers are fantastic, and the
+                    facilities are top-notch. Highly recommend to anyone serious about getting fit!"</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Join Now Form Section -->
+    <!-- Split-Screen Section -->
+    <!-- Membership Form Section -->
+    <section id="membership-form" class="membership-section">
+        <div class="left-content">
+            <h1>WANT IT ALL.<br>GET IT TOGETHER.</h1>
+            <p>Join today and reach your potential.</p>
+        </div>
+        <div class="right-form">
+        <section id="membership-form" class="membership-section">
+            <div class="right-form">
+                    <form action="http://localhost:5001/submit" method="POST">
+                        <div class="form-row">
+                            <input type="text" name="first_name" placeholder="First Name" required>
+                            <input type="text" name="last_name" placeholder="Last Name" required>
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="email" name="company_email" placeholder="Company Email (optional)">
+                        <p>We offer exclusive corporate partnerships. Please add yours to see if you apply.</p>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <select name="club" required>
+                            <option value="">Select the location</option>
+                            <option value="Agra">Agra-Unit</option>
+                            <option value="Delhi">Delhi-Unit</option>
+                        </select>
+                        <button class="form-btn" type="submit">Submit</button>
+                        <p>By continuing, I agree to the Terms & Conditions and Privacy Policy.</p>
+                    </form>
+            </div>
+        </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-section">
+            <footer>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/tushaarkapil/?locale=es_US%3FICID%3DBLOG_MBF_ES&hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </footer>
+            <div class="footer-text">
+                © 2024 Your Website. All rights reserved.
+            </div>
+        </div>
+        <div class="logo-container">
+            <h1>
+                STRIV<span class="custom-e">E</span>
+            </h1>
+            <p>FIT GYM</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script>
+        function changeBackground(imageUrl) {
+                const section = document.getElementById('services-section');
+                section.style.backgroundImage = imageUrl;
+            }
+
+            function resetBackground() {
+                const section = document.getElementById('services-section');
+                section.style.backgroundImage = '';
+            }
+    </script>
+    <script>
+        // Select all anchor links that point to an ID on the page
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent the default jump behavior
+
+                    // Find the target section based on the href attribute
+                    const targetSection = document.querySelector(this.getAttribute('href'));
+
+                    if (targetSection) {
+                        // Calculate the position to scroll to, adjusted for navbar height
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight || 0;
+                        const targetPosition =
+                            targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+                        // Scroll smoothly to the target position
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth', // Enables smooth scrolling
+                        });
+                    }
+                });
+            });
+    </script>
+    <script>
+        // Handle the form submission
+        document.getElementById('membershipForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the form data
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const companyEmail = document.getElementById('companyEmail').value;
+            const phone = document.getElementById('phone').value;
+
+            // Create a new object with form data
+            const formData = {
+                first_name: firstName,
+                last_name: lastName,
+                email: email,
+                company_email: companyEmail,
+                phone: phone
+            };
+
+            // Send the data to the server using fetch (AJAX)
+            fetch('/submit-member', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Member added successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+    background: url('backgroundt.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Tools Container */
+.tools-container {
+    background: rgba(0, 0, 0, 0.3);
+    /* Darker container background */
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle border */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    /* Soft shadow for depth */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Individual Tool Cards */
+.tool-box {
+    background: rgba(255, 255, 255, 0.15);
+    /* Lighter, frosted background */
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    /* Deep shadow for contrast */
+    backdrop-filter: blur(15px);
+    /* Increased blur for frosted effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle border to define edges */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.tool-box:hover {
+    transform: scale(1.07);
+    /* Slight zoom on hover */
+    background: rgba(255, 255, 255, 0.25);
+    /* Slightly more opaque on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5),
+        0 -10px 20px rgba(255, 255, 255, 0.2);
+    /* Enhanced shadow on hover */
+}
+
+.tool-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tool-box p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tools-container {
+        grid-template-columns: 1fr;
+        /* Single-column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 38px;
+        /* Smaller header font */
+    }
+
+    .tool-box {
+        padding: 20px;
+        /* Reduced padding */
+    }
+
+    .tool-box h2 {
+        font-size: 24px;
+        /* Adjusted heading size */
+    }
+
+    .tool-box p {
+        font-size: 16px;
+        /* Adjusted paragraph size */
+    }
+}
+.home-button {
+    position: fixed;
+    bottom: 20px;
+    /* Distance from the bottom of the viewport */
+    left: 20px;
+    /* Distance from the left of the viewport */
+    z-index: 1000;
+}
+
+.home-button .nav-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent, glass-like effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    /* White text for contrast */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-button .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    /* Slightly more opaque on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    /* Subtle zoom effect on hover */
+}
+
+.home-button .icon {
+    color: #fff;
+    /* White color for the home icon */
+    font-size: 18px;
+    /* Adjust size as needed */
+}

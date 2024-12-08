@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+
+<body>
+    <!-- Card Container -->
+    <div class="card">
+        <h1>BMI Calculator</h1>
+
+        <!-- BMI Calculator Box -->
+        <div class="bmi-box">
+            <!-- Gender Selection -->
+            <select id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <!-- Height Input -->
+            <input type="number" id="height" placeholder="Enter height in cm" required>
+
+            <!-- Weight Input -->
+            <input type="number" id="weight" placeholder="Enter weight in kg" required>
+
+            <!-- Calculate Button -->
+            <button onclick="calculateBMI()">Calculate</button>
+
+            <!-- BMI Result -->
+            <div id="result" class="result"></div>
+
+            <!-- BMI Category -->
+            <div id="bmi-category" class="bmi-category"></div>
+
+            <!-- Exercise Recommendations Table -->
+            <div id="exercise-recommendations" class="exercise-recommendations">
+                <table id="exercise-table" style="visibility: hidden;">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Exercise</th>
+                            <th>Sets & Reps</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+        <button onclick="navigateToHome()" class="nav-btn">
+            <span class="icon">&#x1F3E0;</span> <!-- Home icon -->
+        </button>
+        <button onclick="navigateToTools()" class="nav-btn">
+            <span class="icon">&#x2B05;</span> <!-- Back arrow icon -->
+        </button>
+    </div>
+    <script>
+        function navigateToHome() {
+            window.location.href = "index.html"; // Replace "/home" with your actual home page URL
+        }
+
+        function navigateToTools() {
+            window.location.href = "tools.html"; // Replace "/tools" with your actual tools page URL
+        }
+    </script>
+
+
+    <script>
+        // Function to calculate BMI
+        function calculateBMI() {
+            let height = document.getElementById('height').value;
+            let weight = document.getElementById('weight').value;
+
+            if (height && weight) {
+                height = height / 100;
+                let bmi = weight / (height * height);
+                bmi = bmi.toFixed(2);
+
+                let resultElement = document.getElementById('result');
+                resultElement.style.visibility = 'hidden';
+                resultElement.innerHTML = `Your BMI is: ${bmi}`;
+
+                let bmiCategory = "";
+                let recommendation = [];
+
+                const underweightMeals = [
+                    ["Vegetarian Meal", "Chickpea salad, Lentil soup, Paneer curry", "Include whole grains like quinoa or brown rice"],
+                    ["Non-Vegetarian Meal", "Chicken breast, Grilled fish, Boiled eggs", "Include healthy fats like avocado or nuts"]
+                ];
+
+                const exercisePlans = [
+                    ["Fat Burning", "Running, HIIT, Cycling", "30-40 minutes, 4-5 times a week"],
+                    ["Strength Training", "Squats, Lunges, Push-ups", "3 sets of 12 reps"]
+                ];
+
+                if (bmi < 18.5) {
+                    bmiCategory = "Underweight";
+                    recommendation = getRandomMeals(underweightMeals);
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    bmiCategory = "Normal weight";
+                    recommendation = getRandomExercises(exercisePlans);
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    bmiCategory = "Overweight";
+                    recommendation = getRandomExercises(exercisePlans);
+                } else {
+                    bmiCategory = "Obese";
+                    recommendation = getRandomExercises(exercisePlans);
+                }
+
+                let categoryElement = document.getElementById('bmi-category');
+                categoryElement.style.visibility = 'visible';
+                categoryElement.innerHTML = `Category: ${bmiCategory}`;
+
+                let tableBody = document.getElementById('exercise-table').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = "";
+
+                recommendation.forEach(plan => {
+                    let row = tableBody.insertRow();
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    let cell3 = row.insertCell(2);
+                    cell1.innerHTML = plan[0];
+                    cell2.innerHTML = plan[1];
+                    cell3.innerHTML = plan[2];
+                });
+
+                document.getElementById('exercise-table').style.visibility = 'visible';
+                setTimeout(function () {
+                    resultElement.style.visibility = 'visible';
+                }, 300);
+            } else {
+                alert('Please fill in both height and weight');
+            }
+        }
+
+        function getRandomMeals(meals) {
+            const randomMeal1 = meals[Math.floor(Math.random() * meals.length)];
+            const randomMeal2 = meals[Math.floor(Math.random() * meals.length)];
+            return [randomMeal1, randomMeal2];
+        }
+
+        function getRandomExercises(exercises) {
+            const randomExercise1 = exercises[Math.floor(Math.random() * exercises.length)];
+            const randomExercise2 = exercises[Math.floor(Math.random() * exercises.length)];
+            return [randomExercise1, randomExercise2];
+        }
+    </script>
+</body>
+
+</html>

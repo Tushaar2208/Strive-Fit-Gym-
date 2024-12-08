@@ -1,0 +1,219 @@
+/* Global Styles */
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Card Container with Glassmorphism */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Input Fields */
+input[type="number"],
+select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+/* Placeholder Text Style */
+input[type="number"]::placeholder {
+    color: #ffffff;
+    /* White for visibility */
+    font-size: 16px;
+    /* Subtle and readable size */
+    opacity: 0.8;
+    /* Slight transparency for a softer look */
+}
+
+input[type="number"]:hover,
+select:hover {
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Gender Dropdown */
+select {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+select option {
+    color: black;
+}
+
+button {
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* Border to enhance the glass effect */
+    border-radius: 10px;
+    color: #000000;
+    /* Black text */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+    /* Glass effect */
+    backdrop-filter: blur(10px);
+    /* Frosted glass blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Soft shadow for depth */
+    margin-top: 30px;
+    /* Adds space above */
+    margin-bottom: 15px;
+    /* Adds space below */
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    /* Glow effect on hover */
+    background: rgba(255, 255, 255, 0.3);
+    /* Slightly brighter on hover */
+}
+
+/* Table Styles */
+#exercise-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#exercise-table th,
+#exercise-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.1em;
+}
+
+#exercise-table th {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+#exercise-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Result and Category Text */
+#result,
+#bmi-category {
+    visibility: hidden;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#bmi-category {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Exercise Table Visibility Animation */
+#exercise-table {
+    visibility: hidden;
+}
+/* Navigation buttons */
+
+.navigation-buttons {
+    position: fixed;
+    /* Keeps the buttons fixed in place while scrolling */
+    bottom: 20px;
+    /* Distance from the bottom of the viewport */
+    left: 20px;
+    /* Distance from the left of the viewport */
+    display: flex;
+    flex-direction: column;
+    /* Stack buttons vertically */
+    gap: 5px;
+    /* Reduced space between buttons */
+    z-index: 1000;
+    /* Ensure it's on top of other elements */
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent, glass-like effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    /* White text for contrast */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    /* Slightly more opaque on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    /* Subtle zoom effect on hover */
+}

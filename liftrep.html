@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Rep Predictor</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1>Lift Rep Predictor</h1>
+        <p>Estimate how many reps you can perform with any weight.</p>
+
+        <!-- Input for Current Weight and Reps -->
+        <input type="number" id="current-weight" placeholder="Weight you lift (kg)" required>
+        <input type="number" id="current-reps" placeholder="Reps you perform with this weight" required>
+
+        <!-- Input for New Weight -->
+        <input type="number" id="new-weight" placeholder="Weight you want to lift (kg)" required>
+
+        <!-- Predict Button -->
+        <button onclick="predictReps()">Predict Reps</button>
+
+        <!-- Result Display -->
+        <div id="result" class="result"></div>
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+        <button onclick="navigateToHome()" class="nav-btn">
+            <span class="icon">&#x1F3E0;</span> <!-- Home icon -->
+        </button>
+        <button onclick="navigateToTools()" class="nav-btn">
+            <span class="icon">&#x2B05;</span> <!-- Back arrow icon -->
+        </button>
+    </div>
+    <script>
+        function navigateToHome() {
+            window.location.href = "index.html"; // Replace "/home" with your actual home page URL
+        }
+
+        function navigateToTools() {
+            window.location.href = "tools.html"; // Replace "/tools" with your actual tools page URL
+        }
+    </script>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
