@@ -141,7 +141,6 @@ body {
     background-color: #fff;
 }
 /* Logo in Navbar */
-/* Logo in Navbar */
 .navbar .logo-container {
     display: flex;
     align-items: center;
@@ -234,7 +233,6 @@ footer p {
     position: relative;
 }
 
-/* Services Section */
 /* Services Section */
 .services-section {
     margin: 0;
@@ -467,7 +465,7 @@ footer p {
 
 .review-card {
     width: 300px; /* Same fixed width */
-    height: 400px; /* Same fixed height */
+    height: 300px; /* Same fixed height */
     margin: 20px;
     padding: 20px;
     background: #222; /* Solid background */
